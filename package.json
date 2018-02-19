@@ -1,0 +1,52 @@
+{
+  "name": "businessbot",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@version/react-router-v3": "^1.0.0",
+    "apiai": "^4.0.3",
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "firebase": "^4.8.0",
+    "gridfs-stream": "^1.1.1",
+    "localStorage": "^1.0.3",
+    "mongoose": "^4.13.7",
+    "mongoose-type-email": "^1.0.5",
+    "morgan": "^1.9.0",
+    "node-linkedin": "^0.5.6",
+    "passport-linkedin": "^1.0.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.31.5",
+    "react-bootstrap-modal": "^4.0.0",
+    "react-d3-basic": "^1.6.11",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-modal": "^3.1.8",
+    "react-scripts": "1.0.17",
+    "request": "^2.83.0",
+    "shortid": "^2.2.8",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/": {
+      "target": "http://localhost:9000"
+    },
+    "/sockjs-node": {
+      "target": "ws://localhost:9000",
+      "ws": true
+    },
+    "/socket.io": {
+      "target": "ws://localhost:9000",
+      "ws": true
+    }
+  }
+}
